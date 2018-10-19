@@ -68,7 +68,7 @@ nav {
 	position: absolute;
 	top: 100%;
     min-height: 272px;
-    transition: all 0.4s;
+    transition: all 0.3s;
 }
 .dirt.push .square {
 	top: 18%;
