@@ -1,17 +1,19 @@
 html {
+    background-color: wheat;
     box-sizing: border-box;
-    padding: 10px;
     height: auto;
     margin: 0;
-    background-color: wheat;
+    padding: 10px;
 }
+
 body {
     margin: 0;
 }
+
 nav {
-    overflow: hidden;
-    background-image: url('images/grass.jpg');
     background-color: #4CAF50;
+    background-image: url('images/grass.jpg');
+    overflow: hidden;
     padding: 10px;
 }
 
@@ -20,15 +22,16 @@ nav {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
+    cursor: pointer;
     display: block;
     float: left;
     font-size: 16px;
-    cursor: pointer;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none; 
     transition-duration: 0.4s;
 }
+
 /* Invert colors on hover of button */
 .button:hover {
     background-color: white; /* Green */
@@ -38,38 +41,42 @@ nav {
 
 /*flexbox*/
 .parent {
-	width: 600px;
-	height: 400px;
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 auto;
+	height: 400px;
+    margin: 0 auto;
+    width: 600px;
 }
+
 .dirt {
     flex: 1 0 26%;
     overflow: hidden;
-	position: relative;
+    position: relative;
 }
+
 /* after every dirt class we want a block for the mole to emerge */
 .dirt:after {
     background-color: #8B4513;
-	content: "";
-	width: 74%;
-	height: 70px;
-	position: absolute;
-	z-index: 0;
 	bottom: -30px;
+    content: "";
+    height: 70px;
+    position: absolute;
+	width: 74%;
+    z-index: 0;
 }
+
 /* Create three equal columns that sits next to each other */
-.square{
+.diglett{
     background-image: url('images/mole.jpg');
     background-repeat: no-repeat;
-    width: 100%;
     background-size: 74%;
-	position: absolute;
-	top: 100%;
     min-height: 272px;
+    position: absolute;
     transition: all 0.3s;
+    top: 100%;
+    width: 100%;
 }
-.dirt.push .square {
+
+.dirt.push .diglett {
 	top: 18%;
 }

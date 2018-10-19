@@ -1,41 +1,43 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="viewport" content="height=device-height, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <nav>
-            <button class="button" onclick="begin()">Begin!</button>
-            <button class="button"> Pause</button>
-            <button class="button" onclick="reset()">Reset</button>
-        </nav>
-        <header>
-            <p class="Points"> Timer:</p>
-            <p class="Points">Points: 0</p>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="height=device-height, initial-scale=1">
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <nav>
+         <button class="button" onclick="begin()">Begin!</button>
+         <button class="button" onclick="stop()"> Stop</button>
+         <button class="button" onclick="reset()">Reset</button>
+      </nav>
+      <header>
+         <span>Points:</span>
+         <span class="points">0</span>
+         <p>
             <a href="https://github.com/rellison27/whack-a-mole/blob/master/README.md" target="_blank">How To Play</a>
-        </header>
-        <div class="parent">
-            <div class="dirt">
-                <div class="square"></div>
-            </div>
-            <div class="dirt">
-                <div class="square"></div>
-            </div>
-            <div class="dirt">
-                <div class="square"></div>
-            </div>
-            <div class="dirt">
-                <div class="square"></div>
-            </div>
-            <div class="dirt">
-                    <div class="square"></div>
-            </div>
-            <div class="dirt">
-                    <div class="square"></div>
-            </div>
-        </div>
-        <script src="script/script.js"></script>
-    </body>
+         </p>
+      </header>
+      <div class="parent">
+         <div class="dirt">
+            <div class="diglett"></div>
+         </div>
+         <div class="dirt">
+            <div class="diglett"></div>
+         </div>
+         <div class="dirt">
+            <div class="diglett"></div>
+         </div>
+         <div class="dirt">
+            <div class="diglett"></div>
+         </div>
+         <div class="dirt">
+            <div class="diglett"></div>
+         </div>
+         <div class="dirt">
+            <div class="diglett"></div>
+         </div>
+      </div>
+      <script src="script/script.js"></script>
+   </body>
 </html>
