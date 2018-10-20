@@ -1,32 +1,34 @@
+"use strict";
+//Fully functional on IE11
 //grab all classes from html
-const diglett = document.querySelectorAll(".diglett");
-const newPoints = document.querySelector(".points");
-const pits = document.querySelectorAll(".dirt");
-let points = 0;
-let timerDone = false;
-let pausedGame = false;
+var diglett = document.querySelectorAll(".diglett");
+var newPoints = document.querySelector(".points");
+var pits = document.querySelectorAll(".dirt");
+var points = 0;
+var timerDone = false;
+var pausedGame = false;
 
 //function that randomly selects a dirt class for a diglett to emerge from
 function pickPit(pits) {
   //Math.flooor because round was returning higher indices
-  const Onepit = Math.floor(Math.random() * pits.length);
-  const pit = pits[Onepit];
+  var Onepit = Math.floor(Math.random() * pits.length);
+  var pit = pits[Onepit];
   return pit;
 }
 
 //diglett needs to emerge for a random amount of time
 function pickTime() {
-  const min = 300,
-    max = 1000;
+  var min = 300,
+      max = 1000;
   return Math.round(Math.random() * (max - min + 1) + min);
 }
 
 // use the randomly generated time and pit to emerge a diglett
 function emerge() {
-  const emergeWindow = pickTime();
-  const pit = pickPit(pits);
+  var emergeWindow = pickTime();
+  var pit = pickPit(pits);
   pit.classList.add("push");
-  setTimeout(() => {
+  setTimeout(function () {
     //if true keep going if not STOP
     if (!timerDone && !pausedGame) emerge();
     //after time return diglett to its dirt pit
@@ -34,14 +36,12 @@ function emerge() {
   }, emergeWindow);
 }
 
-//add listener for diglett
-diglett.forEach(diglett => diglett.addEventListener("click", getPoints));
-
 //add points for clicking diglett
-function getPoints(click) {
-  if (click.isTrusted) points += 10;
+function getPoints() {
+   points += 10;
   newPoints.textContent = points;
 }
+
 //function that starts the game - can start after stop, not after a full round
 function begin() {
   points = 0;
@@ -57,7 +57,7 @@ function stop() {
 
 // function to begin timer
 function startTimer() {
-  setTimeout(() => {
+  setTimeout(function () {
     //when game is stopped timer from previous game shouldn't infere
     if (!pausedGame) timerDone = true;
   }, 10000);
@@ -65,6 +65,6 @@ function startTimer() {
 
 //function that resets the game and points after you play a full round
 function reset() {
-  newPoints.textContent = 0;
   timerDone = false;
+  newPoints.textContent = 0;
 }
