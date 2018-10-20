@@ -25,9 +25,9 @@ If you ABSOLUTELY LOVE IE11 I recommend just going to the site above in the "Pla
 
 <h3> On Phone/Tablet </h3>
 
-click the link in the "Play Now" section if you have a Samsung S7 or S8 it should work normally (in both positions)
-If you only see four brown rectangular blocks stacked on top of each other zoom out and hit play.
-If you an iphone or iphone7+ you may not be able zoom out to see the whole app *HOWEVER
+click the link in the "Play Now" section if you have a <strong>Samsung</strong> S7 or S8  or Tablet it should work normally (in both positions)
+If you only see four brown rectangular blocks stacked on top of each other <strong>zoom out</strong> and hit play.
+If you have an <strong>iphone or iphone7+</strong> you may not be able zoom out to see the whole app HOWEVER turn your device to the side and voila! Game on!
 
 <h1>Controls And Rules</h1>
 
